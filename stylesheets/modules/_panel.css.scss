@@ -1,0 +1,21 @@
+.#{$app-prefix}-panel{
+  @extend .panel;
+  margin-bottom:  30px;
+  padding-left:  0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darken($border-color, 3) $border-color $border-color;
+  &.rltv{
+    @extend %rltv;
+  }
+  &>.panel-heading{
+    background: #fff;
+    border-bottom: 1px solid $border-color;
+    h1,
+    h2,
+    h3,
+    h4{
+      margin:  0;
+    }
+  }
+}

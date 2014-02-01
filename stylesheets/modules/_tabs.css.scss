@@ -1,0 +1,49 @@
+.#{$app-prefix}-tabs.nav.nav-pills{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  li{
+    -webkit-flex:1 auto;
+    -moz-flex:1 auto;
+    -ms-flex:1 auto;
+    flex:1 auto;
+   
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position:relative;
+    float: none;
+    text-align: center;
+
+    margin:  0 !important;
+    padding: 0;
+    
+    &.active{
+      a{
+        background: $primary-accent-color;
+      }
+    }
+    &>a{
+      display: block;
+      line-height: 35px;
+      padding:     0;
+      margin:      0;
+      width:      100%;
+      max-width:  100%;
+      border-radius: 0 0 0 0 !important;
+      border: 2px solid $primary-accent-color;
+      border-width: 2px 2px 2px 0;
+    }
+    &:first-child>a{
+      border-radius:  5px 0 0 5px;
+      border-left-width: 2px;
+    }
+    &:last-child>a{
+      border-radius:  0 5px 5px 0;
+    }
+  }
+}

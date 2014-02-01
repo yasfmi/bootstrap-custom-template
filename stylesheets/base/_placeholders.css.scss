@@ -1,0 +1,52 @@
+// here defines single property placeholders
+// property name for placeholders' name 
+// abbreviation for their alias
+// abbreviation will be 3~5 letters
+// choose readability & reusability(easy to remember) than shortness
+// l, r, c = left, right, center
+
+
+// position
+%relative,
+%rltv{    position:  relative;}
+%abslt,
+%absolute{position:  absolute;}
+%fixed{   position:  fixed;}
+
+// display
+%block,
+%blk{     display:  block;}
+%inline,
+%inl{     display:  inline;}
+%inline-block,
+%inl-blk{ display:  inline-block;}
+
+// text ----------
+
+// text-deco
+%decoration-none,
+%deco-non{text-decoration:  none;}
+%decoration-underline,
+%deco-ul{ text-decoration:  underline;}
+
+// text-align
+%align-center,
+%al-c{    text-align:  center;}
+%align-left,
+%al-l{    text-align:  left;}
+%align-right,
+%al-r{    text-align:  right;}
+
+%vertical-align-middle,
+%v-al-mid{vertical-align:  middle;}
+%vertical-align-top,
+%v-al-top{vertical-align:  top;}
+%vertical-align-bottom,
+%v-al-btm{vertical-align:  bottom;}
+
+// font-weight
+%ultra-thin{ font-weight:     100;}
+%thin{       font-weight:     200;}
+%normal{     font-weight:     400;}
+%bold{       font-weight:     600;}
+%ultra-bold{ font-weight:     900;}

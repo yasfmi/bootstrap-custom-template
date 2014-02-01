@@ -1,0 +1,155 @@
+// gradients
+
+@mixin vertical ($start-color: #555, $end-color: #333, $start-percent:  0%, $end-percent: 100%) {
+  background-image: -webkit-gradient(       linear, left top,left bottom,  color-stop($start-percent,$start-color),color-stop($end-percent,$end-color));
+  background-image: -moz-linear-gradient(   top,      $start-color $start-percent,            $end-color $end-percent);
+  background-image: -ms-linear-gradient(    top,      $start-color $start-percent,            $end-color $end-percent);
+  background-image: linear-gradient(        to bottom,$start-color $start-percent,            $end-color $end-percent);
+  background-image: -o-linear-gradient(     top,      $start-color $start-percent,            $end-color $end-percent);
+  background-image: -webkit-linear-gradient(top,      $start-color $start-percent,            $end-color $end-percent);
+}
+
+@mixin horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-gradient(linear, $start-percent top, $end-percent top, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, color-stop($start-color $start-percent), color-stop($end-color $end-percent)); // Safari 5.1+, Chrome 10+
+  background-image: -moz-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+  background-image:  linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+
+// box
+@mixin border-box{
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+@mixin content-box{
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  box-sizing:content-box;
+}
+
+
+// responsive
+@mixin respond-to($media) {
+  @if $media == xs {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $media == xs-sm {
+    @media only screen and (max-width: 991px) { @content; } 
+  }
+  @else if $media == md {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+}
+
+// transitions
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+     -moz-transform: rotate($deg);
+       -o-transform: rotate($deg);
+      -ms-transform: rotate($deg);
+          transform: rotate($deg);
+}
+
+@mixin rotateY($deg) {
+  -webkit-transform: rotateY($deg);
+     -moz-transform: rotateY($deg);
+       -o-transform: rotateY($deg);
+      -ms-transform: rotateY($deg);
+          transform: rotateY($deg);
+}
+
+@mixin transition-transform($timing) {
+  -webkit-transition:  -webkit-transform $timing;
+     -moz-transition:     -moz-transform $timing;
+       -o-transition:       -o-transform $timing;
+      -ms-transition:      -ms-transform $timing;
+          transition:          transform $timing;
+}
+
+
+// block size
+
+@mixin size($width: 100%, $height: 100%) {
+  width:   $width;
+  height:  $height;
+}
+
+
+// buttons
+
+// create your buttons
+@mixin btn-theme($color, $text-color: #fff){
+  background-color: $color;
+  border-color:  lighten($color, 5);
+  border-bottom-color:  darken($color, 5);
+  color:          $text-color;
+  &:hover{
+    color:        $text-color;
+    background-color: lighten($color, 5);
+    border-color:  lighten($color, 5);
+    border-bottom-color:  darken($color, 5);
+  }
+}
+
+// add some helper classes to buttons
+@mixin btn-classes{
+  &.blk{
+    width:    100%;
+    display: block;
+  }
+  &.sq{border-radius: 0;}
+  &:hover{
+    color:          #666;
+    background:   #eaeaea;
+    border-color: #eaeaea;
+  }
+  &.lg{
+    @include respond-to(xs-sm) {
+      padding:  10px 8px;
+    }
+    @extend .btn-lg;
+    border-radius:  3px;
+  }
+  &.text-l{
+    @extend %al-l;
+  }
+  &.text-r{
+    @extend %al-r;
+  }
+}
+
+//badge
+
+@mixin badge-theme($color, $text-color: #fff) {
+  background-color: $color;
+  color:            $text-color;
+}
+
+// icon btn
+@mixin prepend-icon($pad, $width, $height) {
+  @extend %rltv;
+  padding-left: $pad;
+
+  &:before{
+    @include size($width, $height);
+    @extend %abslt;
+    content: '';
+    display: block;
+    left:    0;
+    top:     0;
+    background-size: contain;
+    background-repeat:no-repeat;
+  }
+}

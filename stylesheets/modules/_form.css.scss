@@ -1,0 +1,55 @@
+.#{$app-prefix}-fgroup,
+.#{$app-prefix}-form-group{
+  @extend .form-group;
+  &> input[type=text],
+  &> input[type=email],
+  &> input[type=password],
+  &> input[type=number],
+  &> input[type=checkbox],
+  &> select,
+  &> textarea{
+    @include box-shadow(none);
+    @extend .form-control;
+
+  }
+  &.inline{
+    
+    &>input, 
+    &>label,
+    &>a{
+      @extend %inl-blk;
+      width: auto;
+      vertical-align: middle;
+    }
+    &>input[type=checkbox]{
+      padding:  0 10px;
+    }
+    &>label{
+      margin-bottom: 0;
+    }
+  }
+  label{
+    font-weight:  400;
+  }
+  input[type=submit]{
+    @extend .#{$app-prefix}-btn;
+    @extend .#{$app-prefix}-btn-primary;
+  }
+}
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=password],
+input[type=number],
+textarea{
+  @include box-shadow(none);
+  @extend .form-control;
+  border-radius: 0 !important;
+}
+
+input[type=checkbox]{
+  @include box-shadow(none !important);
+  @extend %inl-blk;
+  width:  auto;
+}

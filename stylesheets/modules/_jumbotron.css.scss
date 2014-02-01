@@ -1,0 +1,25 @@
+.ev-jumbotron{
+  @extend .jumbotron;
+  margin:          20px 0;
+  padding-top:     20px;
+  padding-bottom:  40px;
+  .text-sm{
+    font-size:     14px;
+    line-height:   19px;
+  }
+  &.info{
+    background:    #fff;
+    border:       1px solid $info-color;
+  }
+  &.modest{
+    h1, 
+    h2{
+      font-weight:    600;
+      font-family:    'Righteous';
+      text-shadow:    none;
+      margin-top:     0;
+      padding:        0;
+      border-bottom:  3px solid $border-color;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.ev-list-group{
+  @extend .list-group;
+  margin-top: 0;
+  &>a,
+  &>li, 
+  &>div{
+    @extend .list-group-item;
+    @extend .clearfix;
+    &>.heading{
+      @extend .ev-col-lg-2;
+      @extend .ev-col-md-2;
+    }
+    &>.body{
+      @extend .ev-col-lg-10;
+      @extend .ev-col-md-10;
+    }
+  }
+  &>a{
+    color: inherit;
+  }
+
+}

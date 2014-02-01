@@ -1,0 +1,30 @@
+@for $i from 1 through 12 {
+  .#{$app-prefix}-col-lg-#{$i} {@extend .col-lg-#{$i};}
+  .#{$app-prefix}-col-sm-#{$i} {@extend .col-sm-#{$i};}
+  .#{$app-prefix}-col-md-#{$i} {@extend .col-md-#{$i};}
+  .#{$app-prefix}-col-xs-#{$i} {@extend .col-xs-#{$i};}
+}
+
+.#{$app-prefix}-grid-by-3{
+  @extend .#{$app-prefix}-col-lg-4;
+  @extend .#{$app-prefix}-col-md-4;
+  @extend .#{$app-prefix}-col-sm-6;
+  
+}
+
+
+.#{$app-prefix}-grid-by-4{
+  @extend .#{$app-prefix}-col-lg-3;
+  @extend .#{$app-prefix}-col-md-3;
+  @extend .#{$app-prefix}-col-sm-6;
+}
+
+.#{$app-prefix}-grid-half{
+  @extend .#{$app-prefix}-col-lg-6;
+  @extend .#{$app-prefix}-col-md-6;
+  @extend .#{$app-prefix}-col-sm-6;
+  @extend .#{$app-prefix}-col-xs-12;
+  &.force{
+    @extend .#{$app-prefix}-col-xs-6;
+  }
+}

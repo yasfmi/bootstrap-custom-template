@@ -1,0 +1,34 @@
+// IMPORTANT
+// YOU MUST ASSIGN $app-prefix 
+$app-prefix:          myapp;
+
+// your theme-color and 
+$theme-accent-color:  red;
+$theme-color:         blue;
+// buttons colors
+
+// set your own colors
+$primary-color:       $brand-primary;
+$success-color:       $brand-success;
+$info-color:          $brand-info;
+$danger-color:        $brand-danger;
+$inverse-color:       #444;
+
+// base colors
+$link-color:          #53A7FB;
+$link-color-hover:    lighten($link-color, 10);
+$background-color:    #f9f9f2;
+$border-color:        #ccc;
+
+// social button color
+$twitter-color:       #3eaad6;
+$facebook-color:      #4266a5;
+
+$shadow:          0 2px 2px rgba(0,0,0,0.15);
+$base-pad:        15px;
+
+// z-index: 
+$zx-fixed-alert:    10001;
+$zx-header:         10000;
+$zx-dp-sdw:         7998;
+$zx-zero:           0;

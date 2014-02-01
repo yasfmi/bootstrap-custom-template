@@ -1,0 +1,16 @@
+// overriding original bootstrap variables
+// see bootstrap/variables first and override default settings
+
+$zindex-modal-background: 10400;
+$zindex-modal-background: 10500;
+$zindex-dropdown:         10300;
+$zindex-tooltip:          10300;
+
+// Brand colors
+// -------------------------
+
+$brand-primary:         #428bca !default;
+$brand-success:         #5cb85c !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+$brand-info:            #5bc0de !default;

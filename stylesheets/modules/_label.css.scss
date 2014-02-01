@@ -1,0 +1,6 @@
+.ev-label{
+  @extend .label;
+  &.ongoing{
+    @include label-variant($accent-color);
+  }
+}

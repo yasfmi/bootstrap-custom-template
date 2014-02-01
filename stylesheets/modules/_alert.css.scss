@@ -1,0 +1,24 @@
+.#{$app-prefix}-alert{
+  @extend .alert;
+}
+
+// handy classes
+.#{$app-prefix}-alert-success{
+  @extend .#{$app-prefix}-alert;
+  @extend .alert-success;
+}
+
+.#{$app-prefix}-alert-danger{
+  @extend .#{$app-prefix}-alert;
+  @extend .alert-danger;
+}
+
+.#{$app-prefix}-alert-info{
+  @extend .#{$app-prefix}-alert;
+  @extend .alert-info;
+}
+
+.#{$app-prefix}-alert-warning{
+  @extend .#{$app-prefix}-alert;
+  @extend .alert-warging;
+}

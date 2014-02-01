@@ -1,0 +1,6 @@
+.#{$app-prefix}-modal{
+  @extend .modal;
+  .modal-dialog{
+    text-align: left;
+  }
+}

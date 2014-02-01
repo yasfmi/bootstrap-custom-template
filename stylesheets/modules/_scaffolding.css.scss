@@ -1,0 +1,29 @@
+html,
+body{
+  height:     100%;
+  min-height: 100%;
+}
+body{
+  @extend .clearfix;
+}
+body{
+  @extend %relative;
+  padding-top:  65px;
+  background:   #fff;//$background;
+  &[role='application']{
+    padding-top: 100px;
+  }
+
+}
+
+a{
+  font-weight: 500;
+  color:        $link-color;
+  &:hover{
+    color:      $link-color-hover;
+  }
+}
+
+hr{
+  margin:       10px 0;
+}

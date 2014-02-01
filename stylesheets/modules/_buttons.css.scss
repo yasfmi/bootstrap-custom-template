@@ -1,0 +1,51 @@
+// button dedicated mixin;
+// not for sharing with other files
+
+.#{$app-prefix}-btn{
+  @include btn-classes;
+  @include transition(background-color .1s, color .3s);
+  @extend .btn;
+  @extend .btn-default;
+  &.twitter{
+    @include btn-theme($twitter-color);
+  }
+  &.facebook{
+    @include btn-theme($facebook-color);
+  }
+}
+
+// primary
+.#{$app-prefix}-btn-primary{
+  @extend  .btn;
+  @include btn-classes;
+  @include btn-theme($primary-color);
+}
+
+
+// danger
+.#{$app-prefix}-btn-danger{
+  @extend .btn;
+  @include btn-classes;
+  @include btn-theme($danger-color);
+}
+
+.#{$app-prefix}-btn-action{
+  @extend .btn;
+  @include btn-classes;
+  @include btn-theme($action-color);
+}
+
+.#{$app-prefix}-btn-accent{
+  @extend .btn;
+  @include btn-classes;
+  @include btn-theme($accent-color);
+}
+
+.#{$app-prefix}-btn-group-justified{
+  @extend .#{$app-prefix}-btn-group;
+  @extend .btn-group-justified;
+  &>a,
+  &>button{
+    @extend %ev-btn-base;
+  }
+}

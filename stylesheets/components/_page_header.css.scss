@@ -1,0 +1,23 @@
+.#{$app-name}-page-header{
+  padding:      0 15px;
+  &.no-gutter{
+    padding: 0;
+  }
+  h1,
+  h2{
+    font-weight: 900;
+    color:       #303f3f;
+    text-shadow:  1px -1px 0 darken($background, 5);
+  }
+  small{
+    font-weight:  400;
+    font-size:    0.6em;
+    color:        #99999f;
+  }
+}
+.#{$app-name}-section-header{
+  >*{
+    font-weight: 300;
+    color:       #666;
+  }
+}

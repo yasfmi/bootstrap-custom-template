@@ -1,0 +1,28 @@
+.#{$app-prefix}-badge{
+  @extend .badge;
+}
+
+.#{$app-prefix}-badge-primary{
+  @extend .badge;
+  @include badge-theme($brand-primary);
+}
+
+.#{$app-prefix}-badge-success{
+  @extend .badge;
+  @include badge-theme($brand-success);
+}
+
+.#{$app-prefix}-badge-info{
+  @extend .badge;
+  @include badge-theme($brand-info);
+}
+
+.#{$app-prefix}-badge-warning{
+  @extend .badge;
+  @include badge-theme($brand-warning);
+}
+
+.#{$app-prefix}-badge-danger{
+  @extend .badge;
+  @include badge-theme($brand-danger);
+}
